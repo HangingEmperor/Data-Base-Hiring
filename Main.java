@@ -13,6 +13,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("fxml/Home.fxml"));
         primaryStage.setTitle("Data base");
         primaryStage.setScene(new Scene(root, 500, 500));
+        primaryStage.setResizable(false);
         primaryStage.show();
     }
 
