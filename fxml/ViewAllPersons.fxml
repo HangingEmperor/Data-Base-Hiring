@@ -2,17 +2,27 @@
 
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerViewAllPersons">
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerViewAllPersons">
     <children>
-        <TableView fx:id="tableView" editable="true" prefHeight="400.0" prefWidth="600.0" tableMenuButtonVisible="true">
+        <Label layoutX="14.0" layoutY="12.0" text="Enter the user ID to see more details:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textfieldUserID" layoutX="272.0" layoutY="9.0" onKeyPressed="#searchPerson" prefHeight="25.0" prefWidth="309.0" />
+        <TableView fx:id="tableView" editable="true" layoutY="42.0" prefHeight="559.0" prefWidth="600.0" tableMenuButtonVisible="true">
             <columns>
-                <TableColumn fx:id="columnID" onEditCancel="#doCancel" onEditCommit="#doCommit" onEditStart="#doStart" prefWidth="99.0" text="ID" />
-                <TableColumn fx:id="columnName" onEditCancel="#doCancel" onEditCommit="#doCommit" onEditStart="#doStart" prefWidth="74.0" text="Name" />
-                <TableColumn prefWidth="140.0" text="Lastname" />
-                <TableColumn prefWidth="112.0" text="Job" />
+                <TableColumn fx:id="columnID" prefWidth="99.0" text="ID" />
+                <TableColumn fx:id="columnName" prefWidth="74.0" text="Name" />
+                <TableColumn fx:id="columnLastName" prefWidth="75.0" text="Last name" />
+                <TableColumn fx:id="columnJob" prefWidth="75.0" text="Job" />
+                <TableColumn fx:id="columnCareer" prefWidth="75.0" text="Career" />
+                <TableColumn fx:id="columnProgress" prefWidth="75.0" text="Progress" />
             </columns>
             <columnResizePolicy>
                 <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

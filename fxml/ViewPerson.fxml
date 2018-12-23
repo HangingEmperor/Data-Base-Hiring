@@ -1,96 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
-<?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerEditPerson">
-   <children>
-      <Label layoutX="292.0" layoutY="22.0" text="Name:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField fx:id="textfieldName" editable="false" layoutX="372.0" layoutY="17.0" />
-      <Label layoutX="292.0" layoutY="62.0" text="Lastname:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField editable="false" layoutX="372.0" layoutY="59.0" />
-      <Label layoutX="292.0" layoutY="103.0" text="Birthday:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Separator layoutX="268.0" layoutY="15.0" orientation="VERTICAL" prefHeight="369.0" prefWidth="11.0" />
-      <Button defaultButton="true" layoutX="526.0" layoutY="354.0" mnemonicParsing="false" text="Close" />
-      <ImageView fitHeight="143.0" fitWidth="242.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
-      <TextField editable="false" layoutX="96.0" layoutY="299.0" promptText="example@example.com" />
-      <Label layoutX="14.0" layoutY="303.0" text="Email:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField editable="false" layoutX="95.0" layoutY="256.0" promptText="+1-686-555-55-55" />
-      <Label layoutX="14.0" layoutY="260.0" text="Mobile:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField editable="false" layoutX="95.0" layoutY="215.0" promptText="555-55-55" />
-      <Label layoutX="15.0" layoutY="218.0" text="Phone:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="13.0" layoutY="346.0" text="Job:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField editable="false" layoutX="95.0" layoutY="341.0" />
-      <Label layoutX="292.0" layoutY="147.0" text="Adress:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField editable="false" layoutX="372.0" layoutY="144.0" prefHeight="25.0" prefWidth="199.0" />
-      <Label layoutX="292.0" layoutY="190.0" text="City:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="293.0" layoutY="229.0" text="State:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="294.0" layoutY="269.0" text="Country:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField editable="false" layoutX="372.0" layoutY="187.0" />
-      <TextField editable="false" layoutX="372.0" layoutY="225.0" />
-      <Label layoutX="372.0" layoutY="105.0" text="00/00/00">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="372.0" layoutY="269.0" text="country">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <Label layoutX="18.0" layoutY="178.0" text="ID:">
-         <font>
-            <Font size="15.0" />
-         </font>
-      </Label>
-      <TextField editable="false" layoutX="95.0" layoutY="175.0" />
-   </children>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerViewPerson">
+    <children>
+        <Label layoutX="292.0" layoutY="22.0" text="Name:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textfieldName" editable="false" layoutX="372.0" layoutY="17.0" />
+        <Label layoutX="292.0" layoutY="62.0" text="Lastname:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textfieldLastname" editable="false" layoutX="372.0" layoutY="59.0" />
+        <Label layoutX="292.0" layoutY="103.0" text="Birthday:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Separator layoutX="268.0" layoutY="15.0" orientation="VERTICAL" prefHeight="369.0" prefWidth="11.0" />
+        <Button fx:id="buttonClose" defaultButton="true" layoutX="526.0" layoutY="354.0" mnemonicParsing="false" onAction="#closeWindow" text="Close" />
+        <ImageView fx:id="imageView" fitHeight="143.0" fitWidth="242.0" layoutX="14.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+        <TextField fx:id="textfieldEmail" editable="false" layoutX="96.0" layoutY="299.0" promptText="example@example.com" />
+        <Label layoutX="14.0" layoutY="303.0" text="Email:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textfieldMobile" editable="false" layoutX="95.0" layoutY="256.0" promptText="+1-686-555-55-55" />
+        <Label layoutX="14.0" layoutY="260.0" text="Mobile:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textfieldPhone" editable="false" layoutX="95.0" layoutY="215.0" promptText="555-55-55" />
+        <Label layoutX="15.0" layoutY="218.0" text="Phone:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="13.0" layoutY="346.0" text="Job:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textfieldJob" editable="false" layoutX="95.0" layoutY="341.0" />
+        <Label layoutX="292.0" layoutY="147.0" text="Adress:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textfieldAdress" editable="false" layoutX="372.0" layoutY="144.0" prefHeight="25.0" prefWidth="199.0" />
+        <Label layoutX="292.0" layoutY="190.0" text="City:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="293.0" layoutY="229.0" text="State:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="294.0" layoutY="269.0" text="Country:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textfieldCity" editable="false" layoutX="372.0" layoutY="187.0" />
+        <TextField fx:id="textfieldState" editable="false" layoutX="372.0" layoutY="225.0" />
+        <Label fx:id="labelBirthday" layoutX="372.0" layoutY="105.0" text="00/00/00">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label fx:id="labelCountry" layoutX="372.0" layoutY="269.0" text="country">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="18.0" layoutY="178.0" text="ID:">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="textfieldID" editable="false" layoutX="95.0" layoutY="175.0" />
+    </children>
 </AnchorPane>
